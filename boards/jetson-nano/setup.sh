@@ -6,6 +6,7 @@ sudo apt-get -y install nano screen curl python3-pip libjpeg-dev zlib1g-dev libo
 pip3 install --upgrade pip
 pip3 install Cython==0.29.21
 pip3 install numpy==1.19.1
+pip3 install scipy==1.5.2
 pip3 install git+https://github.com/PsycleResearch/RepsycleDatascience  # TODO: manage authentication
 # Torch installation
 wget https://nvidia.box.com/shared/static/9eptse6jyly1ggt9axbja2yrmj6pbarc.whl -O /tmp/torch-1.6.0-cp36-cp36m-linux_aarch64.whl
@@ -21,7 +22,7 @@ wget http://downloads.get-cameras.com/Galaxy_Linux_Python_1.0.1905.9081.tar.gz -
 tar xf /tmp/get_cameras_lib_python.tar.gz -C /tmp
 cd /tmp/Galaxy_Linux_Python_1.0.1905.9081/api && python3 setup.py build && sudo python3 setup.py install
 
-# Cleaning
+# Cleaning (seems to be created on first manual boot, after headless setup)
 rm /home/psycle/examples.desktop
 rmdir /home/psycle/Music
 rmdir /home/psycle/Pictures
